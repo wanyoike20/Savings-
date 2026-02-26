@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Savings App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body onload="loadDashboard()">
+
+<div class="container">
+    <h2>💰 Savings Tracker</h2>
+
+    <input type="number" id="goal" placeholder="Savings Goal"><br>
+    <input type="number" id="amount" placeholder="Add Savings"><br>
+    <button onclick="addSavings()">Add Savings</button>
+
+    <h3>Total Saved: <span id="total">0</span></h3>
+    <h4>Remaining: <span id="remaining">0</span></h4>
+    <h4>This Month Saved: <span id="monthlySaved">0</span></h4>
+    <progress id="progressBar" value="0" max="100"></progress>
+
+    <h3>Add Expense</h3>
+    <input type="number" id="expenseAmount" placeholder="Expense Amount"><br>
+    <button onclick="addExpense()">Add Expense</button>
+
+    <h3>Total Expenses: <span id="totalExpenses">0</span></h3>
+
+    <h3>History</h3>
+    <ul id="history"></ul>
+
+    <canvas id="chart"></canvas>
+
+    <h3 id="advice"></h3>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
